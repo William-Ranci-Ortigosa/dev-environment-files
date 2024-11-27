@@ -33,24 +33,12 @@ export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
 
-export PATH=$PATH:/Users/joseanmartinez/.spicetify
-
 export PATH="$HOME/.rbenv/shims:$PATH"
 
 # ---- FZF -----
 
 # Set up fzf key bindings and fuzzy completion
 eval "$(fzf --zsh)"
-
-# --- setup fzf theme ---
-fg="#CBE0F0"
-bg="#011628"
-bg_highlight="#143652"
-purple="#B388FF"
-blue="#06BCE4"
-cyan="#2CF9ED"
-
-export FZF_DEFAULT_OPTS="--color=fg:${fg},bg:${bg},hl:${purple},fg+:${fg},bg+:${bg_highlight},hl+:${purple},info:${blue},prompt:${cyan},pointer:${cyan},marker:${cyan},spinner:${cyan},header:${cyan}"
 
 # -- Use fd instead of fzf --
 
@@ -110,3 +98,6 @@ eval $(thefuck --alias fk)
 eval "$(zoxide init zsh)"
 
 alias cd="z"
+
+# So I can run my scripts from anywhere
+export PATH="$PATH:$HOME/scripts"
